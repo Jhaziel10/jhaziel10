@@ -1,0 +1,36 @@
+#menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu #item{
+	float: left;
+}
+
+#menu #item a{
+	background-color: rgba(10, 10, 10, 0.60);
+	color: #FFFFFF;
+	padding: 12px 65px;
+	display: block;
+	font-family: arial;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#menu #des{
+	display: none;
+	position: absolute;
+}
+
+#menu #item a:hover{
+	background: ;
+	padding: 13.5px 65px;
+	font-size: 21.5px;
+	position: relative;
+	border-bottom:  1px solid #FFA726;
+}
+
+#menu #item:hover #des{
+	display: block;
+}
