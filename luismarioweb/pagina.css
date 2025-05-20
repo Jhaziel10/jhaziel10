@@ -1,0 +1,68 @@
+/*/ aqui comenzaremos con el codigo de css, el cual consiste en mejorar el codigo de nuestra pagina 
+que esta siendo utilizada con la herramienta de html, comencemos./*/
+
+
+/*/ por sierto esto es para los comentarios/*/
+
+
+* {  /*/ cuando yo coloco un asterisco me refiero a valores universales por lo cual sera utilizado en toda 
+la pagina sin ningun problema/*/
+	margin: 0;
+	padding: 0;
+}
+
+body{ /*/ esto es para darle forma al cuerpo de la pagina, espero y entiendas ingles por que todo el 
+codigo sera hecho en ingles ( lenguaje universal en la programacion)/*/
+
+background: #F3E5F5; /*/ este simbolo es un codigo hexadecimal que representa un color en especifico/*/
+color: #6A1B9A;
+font-family: Century Gothic;
+font-size: 1rem;
+}
+
+/*/ comenzaremos a trabajar con el div/*/
+/*/ cuando se trate de una clase deberas colocar un punto antes de la clase para que este encuentre 
+unicamente la clase que estas ordenando, de otra manera nada funcionara/*/
+.div{
+	width: 207.8vh;
+	height: 15vh;
+	background: #E1BEE7;
+	align-content: center;
+	align-items: center;
+}
+
+.logo{
+	position: absolute;
+	top: -5px;
+	left: 20px;
+	width: 300px;
+	height: 120px;
+}
+
+a{
+	text-decoration: none;
+}
+.links{
+	font-size: 1.5rem;
+}
+.L1{
+	position: absolute;
+	right: 480px;
+	top: 32px;
+}
+.L2{
+	position: absolute;
+	right: 350px;
+	top: 32px;
+}.L3{
+	position: absolute;
+	right: 220px;
+	top: 32px;
+}.L4{
+	position: absolute;
+	right: 20px;
+	top: 32px;
+}
+a:hover{
+	color: #9C27B0;
+}
