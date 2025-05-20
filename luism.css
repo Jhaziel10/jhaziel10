@@ -2,41 +2,47 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box; /* Muy recomendado para manejar mejor tamaños */
 }
 
 body {
 	background: black;
 	font-size: 1rem;
-	font-family: Arial;
+	font-family: Arial, sans-serif; /* Agregué sans-serif como fallback */
 	color: white;
 }
 
-.div {
+/* Evitar usar .div, que es un nombre genérico y confuso */
+.header {
 	position: fixed;
 	width: 100%;
 	height: 18vh;
 	background: #FFA726;
+	z-index: 1000; /* Para que quede sobre otros elementos */
 }
 
+/* Evita posiciones fixed a menos que sean estrictamente necesarias */
+/* Cambié a relative para mejorar responsividad */
 .titlediv {
 	font-size: 2rem;
-	position: fixed;
-	top: 40px;
-	left: 90px;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 90px;
 }
 
+/* Cambié a relative para que se adapte mejor */
 .img {
 	width: 70px;
 	height: 70px;
-	position: fixed;
-	top: 21px;
-	left: 20px;
+	position: relative;
+	margin-top: 21px;
+	margin-left: 20px;
 }
 
 .redes {
-	position: fixed;
-	top: 29px;
-	right: 30px;
+	position: relative;
+	margin-top: 29px;
+	margin-right: 30px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -44,7 +50,7 @@ body {
 
 .icon {
 	margin: 0;
-	padding: 1em 1em;
+	padding: 1em;
 	background: #FFA726;
 	border-radius: 50%;
 	transition: 0.2s all;
@@ -52,6 +58,11 @@ body {
 	height: 25px;
 	border: 2px solid #ffffff;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 1;
 }
 .icon:hover {
 	background: #FFB74D;
@@ -62,7 +73,7 @@ body {
 	font-size: 3rem;
 	color: #FFFFFF;
 	text-align: center;
-	font-family: Century Gothic;
+	font-family: 'Century Gothic', sans-serif;
 	width: 350px;
 	margin: 20px auto 0;
 	border-bottom: 1px solid #FFA726;
@@ -70,7 +81,7 @@ body {
 
 .redbiblio {
 	font-size: 1.5rem;
-	font-family: arial;
+	font-family: Arial, sans-serif;
 	margin-top: 25px;
 	padding: 0;
 	text-align: center;
@@ -81,7 +92,7 @@ body {
 	font-size: 2rem;
 	color: #FFFFFF;
 	text-align: center;
-	font-family: Century Gothic;
+	font-family: 'Century Gothic', sans-serif;
 	width: 90%;
 	max-width: 900px;
 	margin-left: auto;
@@ -110,16 +121,17 @@ body {
 	height: 170px;
 }
 
+/* Cambié a relative para mejor adaptabilidad */
 .Titlep {
-	position: fixed;
-	top: 34px;
-	right: 350px;
+	position: relative;
+	margin-top: 34px;
 	color: #FFFFFF;
 	font-size: 3rem;
-	font-family: arial;
+	font-family: Arial, sans-serif;
 	margin: 0;
 	border-left: 5px solid #FFFFFF;
 	padding-left: 10px;
+	text-align: left;
 }
 
 .vid {
@@ -131,9 +143,10 @@ body {
 }
 .titlev {
 	font-size: 1.5rem;
-	font-family: arial;
+	font-family: Arial, sans-serif;
 	margin-top: 1vh;
 	padding-right: 10px;
+	text-align: left;
 }
 .small {
 	font-size: 0.8rem;
@@ -176,7 +189,7 @@ body {
 	background: #000000;
 	padding: 5px 3px;
 }
-:hover.error2 {
+.error2:hover {
 	font-size: 1.4rem;
 }
 
@@ -184,27 +197,29 @@ body {
 @media (max-width: 768px) {
 	.titlediv {
 		font-size: 1.5rem;
-		top: 20px;
-		left: 100px;
+		margin-top: 20px;
+		margin-left: 20px;
+		text-align: center;
 	}
 
 	.img {
 		width: 50px;
 		height: 50px;
-		top: 15px;
-		left: 15px;
+		margin-top: 15px;
+		margin-left: 15px;
 	}
 
 	.redes {
-		top: 15px;
-		right: 15px;
+		margin-top: 15px;
+		margin-right: 15px;
+		justify-content: center;
 	}
 
 	.Titlep {
 		font-size: 1.5rem;
-		top: 80px;
-		right: 50%;
-		transform: translateX(50%);
+		margin-top: 80px;
+		margin-right: auto;
+		margin-left: auto;
 		text-align: center;
 		border: none;
 		padding-left: 0;
@@ -213,11 +228,13 @@ body {
 	.biblio {
 		font-size: 2rem;
 		width: 90%;
+		margin: 0 auto;
 	}
 
 	.biblio2 {
 		font-size: 1.2rem;
 		width: 90%;
+		margin: 0 auto;
 	}
 
 	.titlev {
@@ -242,3 +259,4 @@ body {
 		font-size: 1rem;
 	}
 }
+
