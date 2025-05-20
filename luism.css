@@ -1,119 +1,244 @@
-/* Estilos base */
+ /* Estilos base */
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* Mejor manejo de tamaños */
 }
 
 body {
 	background: black;
 	font-size: 1rem;
-	font-family: Arial, sans-serif;
+	font-family: Arial;
 	color: white;
 }
 
-/* Header */
 .div {
 	position: fixed;
 	width: 100%;
 	height: 18vh;
 	background: #FFA726;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 20px;
 }
 
-/* Logo */
+.titlediv {
+	font-size: 2rem;
+	position: fixed;
+	top: 40px;
+	left: 90px;
+}
+
 .img {
 	width: 70px;
 	height: 70px;
+	position: fixed;
+	top: 21px;
+	left: 20px;
 }
 
-/* Título */
-.titlediv {
-	font-size: 2rem;
-	font-family: 'Century Gothic', sans-serif;
-	color: white;
-}
-
-/* Redes sociales */
 .redes {
+	position: fixed;
+	top: 29px;
+	right: 30px;
 	display: flex;
-	gap: 15px;
+	justify-content: space-between;
 	align-items: center;
 }
 
-/* Iconos de redes */
 .icon {
 	margin: 0;
-	padding: 0.6em;
+	padding: 1em 1em;
 	background: #FFA726;
 	border-radius: 50%;
 	transition: 0.2s all;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	border: 2px solid #ffffff;
 	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	font-size: 1rem;
 }
 .icon:hover {
 	background: #FFB74D;
-	border-color: #FFCC80;
+	border: 2px solid #FFCC80;
 }
 
-/* Resto de estilos sin cambios... */
 .biblio {
 	font-size: 3rem;
 	color: #FFFFFF;
 	text-align: center;
-	font-family: Century Gothic, sans-serif;
+	font-family: Century Gothic;
 	width: 350px;
 	margin: 20px auto 0;
 	border-bottom: 1px solid #FFA726;
 }
 
-/* ... */
+.redbiblio {
+	font-size: 1.5rem;
+	font-family: arial;
+	margin-top: 25px;
+	padding: 0;
+	text-align: center;
+}
 
+.biblio2 {
+	margin-top: 10vh;
+	font-size: 2rem;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: Century Gothic;
+	width: 90%;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #FFA726;
+}
+
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.img1, .img2 {
+	margin: 10px;
+}
+.img1 {
+	width: 149px;
+	height: 175px;
+}
+.img2 {
+	width: 240px;
+	height: 170px;
+}
+
+.Titlep {
+	position: fixed;
+	top: 34px;
+	right: 350px;
+	color: #FFFFFF;
+	font-size: 3rem;
+	font-family: arial;
+	margin: 0;
+	border-left: 5px solid #FFFFFF;
+	padding-left: 10px;
+}
+
+.vid {
+	width: 100%;
+	margin-top: 25px;
+}
+.video {
+	border-left: 2px solid #FFA726;
+}
+.titlev {
+	font-size: 1.5rem;
+	font-family: arial;
+	margin-top: 1vh;
+	padding-right: 10px;
+}
+.small {
+	font-size: 0.8rem;
+	color: #BDBDBD;
+}
+
+.librot1 {
+	font-size: 2rem;
+	padding-left: 1em;
+	color: #FFA726;
+	border-left: 3px solid #FFA726;
+	margin-top: 25px;
+}
+.pdf {
+	width: 99.5%;
+	height: 150vh;
+	background: #FFA726;
+	margin-top: 15px;
+}
+
+.fuente {
+	text-align: right;
+	font-size: 0.8rem;
+	margin-top: 15px;
+	padding-right: 1em;
+	border-right: 3px solid #FFA726;
+	border-bottom: 1px solid #FFA726;
+	margin-bottom: 10px;
+}
+
+.error {
+	font-size: 3rem;
+	text-align: center;
+}
+.error2 {
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #FFA726;
+	background: #000000;
+	padding: 5px 3px;
+}
+:hover.error2 {
+	font-size: 1.4rem;
+}
+
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
-	.div {
-		position: relative; /* Para que no quede fijo y se adapte */
-		height: auto;
-		flex-direction: column;
-		padding: 10px 0;
-		text-align: center;
+	.titlediv {
+		font-size: 1.5rem;
+		top: 20px;
+		left: 100px;
 	}
 
 	.img {
 		width: 50px;
 		height: 50px;
-		margin-bottom: 10px;
-	}
-
-	.titlediv {
-		font-size: 1.5rem;
-		margin-bottom: 10px;
+		top: 15px;
+		left: 15px;
 	}
 
 	.redes {
-		display: none; /* Oculta redes sociales en móvil */
+		top: 15px;
+		right: 15px;
 	}
 
-	/* Ajustes para otros textos si quieres */
 	.Titlep {
-		position: relative;
-		top: auto;
-		right: auto;
 		font-size: 1.5rem;
+		top: 80px;
+		right: 50%;
+		transform: translateX(50%);
 		text-align: center;
-		margin: 20px auto;
 		border: none;
 		padding-left: 0;
 	}
-}
 
+	.biblio {
+		font-size: 2rem;
+		width: 90%;
+	}
+
+	.biblio2 {
+		font-size: 1.2rem;
+		width: 90%;
+	}
+
+	.titlev {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.librot1 {
+		font-size: 1.5rem;
+		padding-left: 0.5em;
+	}
+
+	.pdf {
+		height: 100vh;
+	}
+
+	.error {
+		font-size: 2rem;
+	}
+
+	.error2 {
+		font-size: 1rem;
+	}
+}
